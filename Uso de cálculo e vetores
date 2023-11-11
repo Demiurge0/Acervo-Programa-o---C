@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+// Neste programa foi declarado uma string a partir de um vetor sem valor definido que é aberto e encerrado automáticamente. Um vetor declarado deve possuir um digito a mais, contado a partir de zero. O digito final é \0.
+
+
+int main(void) {
+// Ao declarar uma string é possivel fazer a leitura dessas duas formas.
+  char Palavra[] = {'0','0','0','0','0','0','A','1','\0'};
+  char Nome[] = "João Batista";
+  char Boletim[] = "Boletim:"; 
+  int RA;
+  int Idade;
+  RA = 00001;
+  Idade = 18;
+
+// Ao declarar o vetor de valor X, se aloca na memória X espaços(0-2 - 0,1,2.). Criando instâncias de 0 à 2. Ou seja, há 3 vetores utilizáveis dos algarismos de 0 até 2.
+float Notas[3];
+  Notas[0] = 7.5;
+  Notas[1] = 5.5;
+  Notas[2] = 3.5;
+
+// Este calcula a variável chamada de Média a partir dos vetores anteriores, que serão calculados para determinar o valor médio final. 
+float Media;
+  Media = (Notas[0] + Notas[1] + Notas[2])/3;
+  
+// As ordens das declarações de % influenciam na leitura e devem ser respeitadas de acordo com sua colocação a partir do "". Exemplo: Nome vem primeiro, então deve ser registrado primeiro para a leitura do programa.
+
+// A ordem das declarações devem ser correspondentes aos tipos definidos no comando, por exemplo, o int sempre vai ser um int, nunca um char (Nome sempre %s nunca %d).
+  printf(" Nome: %s\n Idade: %d\n Turma: %s\n RA: %d\n", Nome, Idade, Palavra, RA);
+
+// Uma simples repetição e exercício, que reforça o que já foi dito, nota-se as especificações para o String(%s) e Ponto Flutuante(%s)
+  printf(" \n Notas - %s\n Matematica: %f\n Geografia: %f\n Portugues: %f\n", Boletim,  Notas[0], Notas[1], Notas[2]);
+
+// Percebe a variável e calcula para aprovado ou reprovado a partir do valor determinado pelo estado "if" ou "se". (Se média for maior ou igual à 6, imprima Aprovado, else(se não) imprima Reprovado).
+if (Media >= 6)
+  printf ("\n Aprovado");
+else
+  printf("\n Reprovado");
+  
+  return 0;
+}
