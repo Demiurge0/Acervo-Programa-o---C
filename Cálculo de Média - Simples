@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main(void){
+float A1, A2, A3, A4, MediaN1, N2, APS, Soma, Sub;
+  printf("Qual a nota da A1?\n");
+  scanf("%f", &A1);
+  printf("Qual a nota da A2?\n");
+  scanf("%f", &A2);
+  printf("Qual a nota da A3?\n");
+  scanf("%f", &A3);
+  printf("Qual a nota da A4?\n");
+  scanf("%f", &A4);
+  
+  MediaN1 = (A1+A2+A3+A4)/4;
+  printf("Sua nota na MediaN1(de peso 4) é %1.1f\n\n", MediaN1);
+
+  printf("Qual a nota da N2?\n");
+  scanf("%f", &N2);
+  printf("Qual a nota da APS?\n");
+  scanf("%f", &APS);
+
+Soma = N2 + APS;
+  //OBS: A nota maxima da N2 é 9 e da APS 1
+  printf("A soma da prova de peso 6(N2+APS) é %1.1f\n\n", Soma);
+
+if((MediaN1 * 0.4) + (Soma * 0.6) >= 6){
+  printf("Sua Nota final é %1.1f\n\n", (MediaN1 * 0.4) + (Soma * 0.6));
+  printf("Aprovado");
+}else{
+  printf("Sua nota não atingiu a nota necessaria, portanto precisará da sub\n\n");
+  printf("Qual sua nota da Sub?\n");
+  scanf("%f", &Sub);
+   printf("Sua nota final com a Substituta é %1.1f\n\n", (MediaN1 * 0.4) + ((APS + Sub) * 0.6));
+ if((MediaN1 * 0.4) + (Sub + APS * 0.6) >= 6){
+   printf("Aprovado");
+ }else{
+   printf("Reprovado");
+ }
+}
+ return 0;
+}
