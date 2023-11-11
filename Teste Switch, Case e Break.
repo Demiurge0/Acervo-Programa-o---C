@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+int main(){
+  int dia;
+  float pergunta;
+  
+do {
+  do{
+  printf("\ndigite um numero correspondente a um dia da semana:");
+  scanf("%d", &dia);
+    if(dia < 1 || dia > 7)
+      printf("\nDia da semana invalido. Digite novamente.\n\n");
+  } while(dia < 1 || dia > 7);
+
+  switch (dia) {
+    case 1:
+     printf("\nO dia correspondente é Domingo.\n\n");
+     break;
+
+    case 2:
+      printf("\nO dia correspondente é Segunda.\n\n");
+      break;
+
+    case 3:
+      printf("\nO dia correspondente é Terca.\n\n");
+      break;
+
+    case 4:
+      printf("\nO dia correspondente é Quarta.\n\n");
+      break;
+
+    case 5:
+      printf("\nO dia correspondente é Quinta.\n\n");
+      break;
+
+    case 6:
+      printf("\nO dia correspondente é Sexta.\n\n");
+      break;
+
+    case 7:
+      printf("\nO dia correspondente é Sabado.\n\n");
+      break;
+  }
+
+  do{
+  printf("\nVocê deseja repetir o programa? Digite 1 para sim ou 2 para não.\n\n");
+  scanf("%f", &pergunta);
+    if (pergunta == 2)
+      printf("\nFim do programa.\n\n");
+     if (pergunta < 1 || pergunta > 2)
+      printf("\nDigite 1 para sim ou 2 para não.");
+  } while(pergunta < 1 || pergunta > 2);
+  } while (pergunta == 1);
+  
+  
+  return 0;
+}
