@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int main(void) {
+ // Declaração de variáveis
+  float nota[4], media;
+  // Laço de repetição para atribruir os valores ao vetor de 0....3
+  do {
+    printf("digite sua nota 1: ");
+    scanf("%f", &nota[0]);
+  if (nota[0] > 10)printf("\nSua nota não pode ser maior que 10, digite a nota novamente.\n\n");  
+  }  while( nota[0] > 10 );
+  
+  do {
+    printf("\ndigite sua nota 2: ");
+    scanf("%f", &nota[1]);
+  if (nota[1] > 10)printf("\nSua nota não pode ser maior que 10, digite a nota novamente.\n\n");  
+  }  while( nota[1] > 10 );
+  
+  do {
+    printf("\ndigite sua nota 3: ");
+    scanf("%f", &nota[2]);
+  if (nota[2] > 10)printf("\nSua nota não pode ser maior que 10, digite a nota novamente.\n\n");  
+  }  while( nota[2] > 10 );
+  
+  do {
+    printf("\ndigite sua nota 4: ");
+    scanf("%f", &nota[3]);
+  if (nota[3] > 10)printf("\nSua nota não pode ser maior que 10, digite a nota novamente.\n\n");  
+  }  while( nota[3] > 10 );
+
+  media = (nota[0] + nota[1] + nota[2] + nota[3])/4;
+  // mandar imprimir a nota final dividido por 4, pois são 4 notas
+  printf("\nSua média é: %1.1f\n\n", media);
+  
+ if(media >=6){
+   printf("Você foi aprovado");
+ }else{
+   printf("Você foi reprovado");
+  
+  return 0;
+
+}}
